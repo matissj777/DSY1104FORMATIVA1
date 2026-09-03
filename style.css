@@ -1,22 +1,71 @@
-.logo-img {
-    width: 1300px;
-    height: 220px;
-    object-fit: contain;
+/* ESTILOS GENERALES Y BASE */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* SECCIÓN DE SERVICIOS */
+/* NAVEGACIÓN (#nav) */
+#nav {
+    background-color: #2a7b6f;
+    padding: 15px;
+    text-align: center;
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+#nav a:hover {
+    text-decoration: underline;
+}
+
+/* HEADER Y LOGO */
+header {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.logo-img {
+    max-width: 100%;
+    width: auto;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* CONTENIDOS Y TEXTOS */
+main, section, article {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #2a7b6f;
+    text-align: center;
+}
+
+/* SECCIÓN DE SERVICIOS Y CARDS */
 .services {
     width: 90%;
     max-width: 1200px;
-    margin: 50px auto;
-    padding: 30px;
+    margin: 40px auto;
+    padding: 20px;
     box-sizing: border-box;
 }
 
 .services h2 {
     text-align: center;
     font-size: 32px;
-    color: #1e4b70;
+    color: #2a7b6f;
 }
 
 .services > p {
@@ -27,58 +76,128 @@
     color: #555;
 }
 
-/* CONTENEDOR DE LAS CARDS */
 .services-grid {
     display: grid;
-
-    /* Se organizan automáticamente según el tamaño de pantalla */
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-
     gap: 25px;
-
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-/* CARD INDIVIDUAL */
 .service-card {
     background: #ffffff;
     border-radius: 15px;
     overflow: hidden;
-
     text-align: center;
-
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
-
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* IMAGEN DENTRO DE LA CARD */
 .service-card img {
     width: 100%;
-    height: 220px;
-
+    height: 200px;
     display: block;
-
     object-fit: cover;
 }
 
-/* NOMBRE DEL SERVICIO */
 .service-card span {
     display: block;
-
     padding: 18px;
-
     font-size: 18px;
     font-weight: bold;
-
-    color: #1e4b70;
+    color: #2a7b6f;
 }
 
-/* EFECTO AL PASAR EL MOUSE */
 .service-card:hover {
     transform: translateY(-8px);
-
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* FORMULARIO DE CONTACTO */
+form {
+    max-width: 500px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #2a7b6f;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    background-color: #2a7b6f;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #1e584f;
+}
+
+/* SECCIÓN DE VIDEO */
+.video-section {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* FOOTER */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
 }
