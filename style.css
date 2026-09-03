@@ -3,3 +3,82 @@
     height: 220px;
     object-fit: contain;
 }
+
+/* SECCIÓN DE SERVICIOS */
+.services {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #1e4b70;
+}
+
+.services > p {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* CONTENEDOR DE LAS CARDS */
+.services-grid {
+    display: grid;
+
+    /* Se organizan automáticamente según el tamaño de pantalla */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* CARD INDIVIDUAL */
+.service-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* IMAGEN DENTRO DE LA CARD */
+.service-card img {
+    width: 100%;
+    height: 220px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+/* NOMBRE DEL SERVICIO */
+.service-card span {
+    display: block;
+
+    padding: 18px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    color: #1e4b70;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
